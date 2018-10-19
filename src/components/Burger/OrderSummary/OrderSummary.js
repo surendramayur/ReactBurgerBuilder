@@ -3,7 +3,7 @@ import React from 'react';
 import Aux from '../../../hoc/ReactAux';
 import Button from '../../UI/Button/Button';
 
-const orderSummary = (props) => {
+const OrderSummary = (props) => {
     const ingredientSummary = Object.keys(props.ingredients)
         .map(igKey => {
             return <li key={igKey} >
@@ -23,7 +23,10 @@ const orderSummary = (props) => {
             <Button btnType="Danger" clicked={props.purchaseCancelled} >CANCEL</Button>
             <Button btnType="Success" clicked={props.purchaseContinued} >CONTINUE</Button>
         </Aux>
-    );
+    );   
 };
 
-export default orderSummary;
+    
+
+
+export default OrderSummary;
